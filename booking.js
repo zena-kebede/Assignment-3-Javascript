@@ -12,7 +12,7 @@ document.addEventListener ("DOMContentLoaded", function () {
 // added challenge: don't update the dayCounter if the same day is clicked more than once. hint: .classList.contains() might be helpful here!
 let daysOfWeek = document.querySelectorAll('.day-selector li');
 
-daysOfWeek.forEach(day => {
+daysOfWeek.forEach(function(day) {
     day.addEventListener('click', function() {
         day.classList.toggle('clicked');
         selectedDays += day.classList.contains('clicked') ? 1 : -1;
@@ -20,12 +20,13 @@ daysOfWeek.forEach(day => {
     });
 });
 
+
 /********* clear days *********/
 // when the clear-button is clicked, the "clicked" class is removed from all days, any other relevant variables are reset, and the calculated cost is set to 0.
 let clearButton = document.getElementById('clear-button');
 
 clearButton.addEventListener('click', function() {
-    daysOfWeek.forEach(day => {
+    daysOfWeek.forEach(function(day) {
         day.classList.remove('clicked');
     });
     selectedDays = 0;
