@@ -34,11 +34,8 @@ body {
     - first-level headings are size 48px, centered vertically and horizontally in the available space.
     - 2nd-level headings have a font size of 36px, and 12px of space below.
     - any element with the .large-text class has a font size of 24px.
-    - any element with the .fake-button class will have a background colour of mustard yellow 
-    (see colour palette above), be center aligned, with a line-height of 3 
-    and a solid black border that is 1px wide.
-    - all anchors will have the underline removed and be black in colour. 
-    all anchors in the main and footer sections will be underlined in their hover-state.
+    - any element with the .fake-button class will have a background colour of mustard yellow (see colour palette above), be center aligned, with a line-height of 3 and a solid black border that is 1px wide.
+    - all anchors will have the underline removed and be black in colour. all anchors in the main and footer sections will be underlined in their hover-state.
     - the hover-state of .fake-button and .blue-hover elements will:
         - add an underline, 
         - set the background-colour to cornflower blue (see colour palette above),
@@ -54,7 +51,7 @@ h1 {
     justify-content: center;
     margin: 0;
 }
-h2 {
+.index h2 , .booking-page h2 {
     font-size: 36px;
     margin-bottom: 12px;
 }
@@ -86,11 +83,9 @@ main a:hover, footer a:hover, .bluehover a:hover {
 /* TO DO:
     - the header and footer will be the same mustard-yellow as the buttons.
     - the header is 150px tall.
-    - the header image is 100px wide and tall with 25px of space above, 
-    below, and on its left, and the top-level heading is centered in the remaining width.
+    - the header image is 100px wide and tall with 25px of space above, below, and on its left, and the top-level heading is centered in the remaining width.
     - there will be 25px of space between the header and main, and 50px of space between main and footer.
-    - the footer will be 60px tall, have a font-weight of 200, 
-    and the text within will be centered vertically and horizontally.
+    - the footer will be 60px tall, have a font-weight of 200, and the text within will be centered vertically and horizontally.
 */
 header, footer {
     background-color: #E5AF42;
@@ -110,7 +105,7 @@ h1 {
 footer {
     display: flex;
     margin: 50px 0px 0px 0px;
-    height: 60px;
+    padding: 30px;
     font-weight: 200;
     align-items: center;
     justify-content: center;
@@ -120,17 +115,11 @@ footer {
 /************* index page *************/
 
 /* TO-DO: 
-    - this is a 2-column layout: text on the left, and an image on the 
-    right. The image will be 300px wide, with 25px between it and the 
-    text column, which takes up the remaining space. The image will also 
-    have 50px of space below.
+    - this is a 2-column layout: text on the left, and an image on the right. The image will be 300px wide, with 25px between it and the text column, which takes up the remaining space. The image will also have 50px of space below.
     - the h2 on this page will have a line-height equal to the font size.
     - each paragraph on this page will have 12px of space beneath it.
-    - each fake-button on this page will be 250px wide with 150px 
-    of space between them.
-    - the pair of fake-buttons will be centered on the page. 
-    HINT: can calculate the required margin to make them 
-    appear to be centered.
+    - each fake-button on this page will be 250px wide with 150px of space between them.
+    - the pair of fake-buttons will be centered on the page. HINT: can calculate the required margin to make them appear to be centered.
 */
 div img {
     width: 300px;
@@ -190,7 +179,7 @@ p.fake-button {
     cursor: pointer;
     margin: 10px auto;
 }
-.clicked.active {
+.clicked {
     background-color: #E5AF42;
 }
 
@@ -203,7 +192,7 @@ p.fake-button {
     - all form input, textarea, and and button elements will have the same font as the rest of the page, a line-height of 24px, a font-size of 16px, and the same border as other buttons on the site. There will be 24px of space below each of these elements.
     - the edges of the button will line up exactly with the text-area element. HINT: time for some math!
 */
-main.contact {
+.contact {
     display: flex;
     flex-direction: column;
     height: 420px;
@@ -233,6 +222,13 @@ button {
     border: 1px solid black;
     margin-bottom: 24px;
     width: 307px;
-
 }
-
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+.thank-you-message {
+    font-size: 24px;
+    margin-bottom: 375px;
+}
